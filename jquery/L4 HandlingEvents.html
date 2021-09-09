@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script
+    src="https://code.jquery.com/jquery-3.5.1.min.js"
+    integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+    crossorigin="anonymous"></script>
+</head>
+<script>
+    $("document").ready(function(){
+         $("#textbox").on("click",whenMouseIsClicked);
+         $("textbox").on("mouseleaves",whenMouseLeaves);
+
+         function whenMouseIsClicked(){
+             $("#textbox").html("<h4>You clicked me</h4>");
+         }
+         function whenMouseLeaves(){
+             $("#textbox").html("<h4>You leave me</h4>");
+         }
+    });
+</script>
+<style>
+    #textbox{
+        width: 300px;
+        height: 700px;
+        background-color: grey;
+        color: black;
+        border: 2px solid black;
+    }
+</style>
+<body>
+    <h3>HANDLING EVENTS IN JQUERY</h3>
+    <div id="textbox">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores, ullam.
+    </div>
+</body>
+</html>
